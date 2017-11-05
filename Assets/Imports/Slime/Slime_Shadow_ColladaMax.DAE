@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Random Talking Bush</author>
+      <authoring_tool>3dsMax 11 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=0;ExportTangents=0;ExportAnimations=1;SampleAnim=0;ExportAnimClip=0;BakeMatrices=0;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+    </contributor>
+    <created>2011-02-11T22:06:50Z</created>
+    <modified>2011-02-11T22:06:51Z</modified>
+    <unit meter="0.0254" name="inch"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="Material__470" name="Material__470">
+      <instance_effect url="#Material__470-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Material__470-fx" name="Material__470">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588 0.588 0.588 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Slime-mesh" name="Slime">
+      <mesh>
+        <source id="Slime-mesh-positions">
+          <float_array id="Slime-mesh-positions-array" count="174">7.823 13.9969 17.8051 0 4.18327 25.8176 4.18333 -0.000001 25.8175 1.13956 -0.000002 34.6353 0 1.13956 34.6353 0 -0.000002 35.579 -1.13956 -0.000002 34.6353 0 -1.13956 34.6353 0 -4.18327 25.8176 -4.18329 -0.000001 25.8175 -7.823 13.9969 17.8051 -18.39 -0.000001 11.7317 -16.2444 9.07905 11.7306 -15.108 8.44388 5.09084 -9.07901 16.2444 11.7306 -13.9969 7.823 17.8051 -15.8457 -0.000001 17.801 -13.9969 -7.823 17.8051 -0.000001 17.1034 5.09492 8.53175 15.3201 5.09084 0 11.9715 1.17452 5.9102 10.5748 1.16691 10.5748 5.9102 1.1669 0 0 0.257842 9.07903 16.2443 11.7306 0 18.39 11.7317 0 15.8457 17.801 15.108 8.44389 5.09083 16.2443 9.07908 11.7306 13.9969 7.823 17.8051 18.39 -0.000001 11.7317 15.8458 -0.000001 17.8007 13.9969 -7.82301 17.8051 15.3201 -8.53177 5.09083 17.1034 0 5.095 -0.000001 -17.1034 5.09492 0 -18.39 11.7317 -9.07901 -16.2444 11.7306 0 -15.8457 17.801 9.07903 -16.2443 11.7306 7.823 -13.9969 17.8051 5.9102 -10.5748 1.16691 0 -11.9715 1.17452 8.44387 -15.108 5.09084 10.5748 -5.9102 1.1669 11.9714 -0.000001 1.17448 16.2443 -9.07909 11.7306 -17.1034 0 5.09488 -10.5748 5.9102 1.16691 -8.53175 15.3201 5.09084 -5.9102 10.5748 1.16692 -5.9102 -10.5748 1.16692 -10.5748 -5.9102 1.16691 -11.9714 0 1.1745 -8.44387 -15.108 5.09084 -15.3201 -8.53176 5.09084 -16.2444 -9.07906 11.7306 -7.823 -13.9969 17.8051</float_array>
+          <technique_common>
+            <accessor source="#Slime-mesh-positions-array" count="58" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Slime-mesh-normals">
+          <float_array id="Slime-mesh-normals-array" count="174">0.386591 0.683169 0.619538 0.000000 0.651847 0.75835 0.651846 0.000000 0.758351 0.855511 0 0.517785 0 0.855511 0.517785 0 -0.000000 1 -0.855511 0 0.517784 0 -0.855511 0.517785 0.000000 -0.651847 0.75835 -0.651845 0.000000 0.758352 -0.38659 0.683165 0.619543 -0.994797 0.003771 0.10181 -0.869088 0.484739 0.098558 -0.757866 0.416458 -0.502197 -0.484189 0.868238 0.108275 -0.683126 0.386619 0.619568 -0.79137 0 0.611338 -0.683126 -0.386619 0.619568 0.000002 0.865472 -0.500957 0.42206 0.761352 -0.492146 -0.000000 0.387778 -0.921753 0.186927 0.335836 -0.923186 0.345038 0.188294 -0.919508 -0.000000 0 -1 0.484193 0.868236 0.108276 0.000005 0.995138 0.098493 0.000001 0.79141 0.611286 0.757868 0.416457 -0.502195 0.869085 0.484745 0.098559 0.683128 0.386615 0.619568 0.994796 0.003771 0.101812 0.791375 0 0.611332 0.683128 -0.386615 0.619568 0.756943 -0.420146 -0.500514 0.861738 0.009429 -0.507266 0.000002 -0.863285 -0.504716 0.000005 -0.995138 0.098492 -0.481615 -0.870483 0.101518 0.000002 -0.791411 0.611285 0.481618 -0.870481 0.101519 0.386591 -0.683169 0.619538 0.191868 -0.345323 -0.918661 -0.000000 -0.392114 -0.919917 0.412842 -0.757179 -0.506203 0.339403 -0.188677 -0.921524 0.391949 -0.000000 -0.919987 0.867413 -0.48421 0.114613 -0.861735 0.00943 -0.507271 -0.345036 0.188295 -0.919508 -0.42206 0.761349 -0.492152 -0.186928 0.335835 -0.923186 -0.191868 -0.345322 -0.918662 -0.339401 -0.188678 -0.921525 -0.39194 0 -0.919991 -0.412841 -0.757175 -0.506209 -0.756941 -0.420147 -0.500516 -0.867416 -0.484204 0.114612 -0.38659 -0.683165 0.619543</float_array>
+          <technique_common>
+            <accessor source="#Slime-mesh-normals-array" count="58" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Slime-mesh-map-channel1">
+          <float_array id="Slime-mesh-map-channel1-array" count="3">-1 -1 0</float_array>
+          <technique_common>
+            <accessor source="#Slime-mesh-map-channel1-array" count="1" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Slime-mesh-vertices">
+          <input semantic="POSITION" source="#Slime-mesh-positions"/>
+        </vertices>
+        <triangles material="Material__470" count="112">
+          <input semantic="VERTEX" source="#Slime-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Slime-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Slime-mesh-map-channel1" offset="2" set="1"/>
+          <p>0 0 0 1 1 0 2 2 0 1 1 0 3 3 0 2 2 0 1 1 0 4 4 0 3 3 0 4 4 0 5 5 0 3 3 0 4 4 0 6 6 0 5 5 0 6 6 0 7 7 0 5 5 0 6 6 0 8 8 0 7 7 0 8 8 0 3 3 0 7 7 0 8 8 0 2 2 0 3 3 0 4 4 0 1 1 0 6 6 0 1 1 0 9 9 0 6 6 0 1 1 0 10 10 0 9 9 0 7 7 0 3 3 0 5 5 0 8 8 0 6 6 0 9 9 0 11 11 0 12 12 0 13 13 0 12 12 0 14 14 0 13 13 0 12 12 0 15 15 0 14 14 0 15 15 0 10 10 0 14 14 0 15 15 0 9 9 0 10 10 0 12 12 0 11 11 0 15 15 0 11 11 0 16 16 0 15 15 0 11 11 0 17 17 0 16 16 0 17 17 0 9 9 0 16 16 0 16 16 0 9 9 0 15 15 0 18 18 0 19 19 0 20 20 0 19 19 0 21 21 0 20 20 0 19 19 0 22 22 0 21 21 0 22 22 0 23 23 0 21 21 0 21 21 0 23 23 0 20 20 0 19 19 0 18 18 0 24 24 0 18 18 0 25 25 0 24 24 0 18 18 0 14 14 0 25 25 0 14 14 0 26 26 0 25 25 0 14 14 0 10 10 0 26 26 0 10 10 0 1 1 0 26 26 0 25 25 0 26 26 0 24 24 0 26 26 0 0 0 0 24 24 0 26 26 0 1 1 0 0 0 0 19 19 0 24 24 0 27 27 0 24 24 0 28 28 0 27 27 0 24 24 0 29 29 0 28 28 0 29 29 0 30 30 0 28 28 0 29 29 0 31 31 0 30 30 0 31 31 0 32 32 0 30 30 0 31 31 0 2 2 0 32 32 0 33 33 0 34 34 0 30 30 0 34 34 0 27 27 0 30 30 0 34 34 0 22 22 0 27 27 0 22 22 0 19 19 0 27 27 0 31 31 0 29 29 0 2 2 0 29 29 0 0 0 0 2 2 0 29 29 0 24 24 0 0 0 0 27 27 0 28 28 0 30 30 0 35 35 0 36 36 0 37 37 0 36 36 0 38 38 0 37 37 0 36 36 0 39 39 0 38 38 0 39 39 0 40 40 0 38 38 0 39 39 0 32 32 0 40 40 0 32 32 0 2 2 0 40 40 0 2 2 0 8 8 0 40 40 0 8 8 0 38 38 0 40 40 0 35 35 0 39 39 0 36 36 0 23 23 0 41 41 0 42 42 0 41 41 0 43 43 0 42 42 0 41 41 0 44 44 0 43 43 0 44 44 0 33 33 0 43 43 0 42 42 0 43 43 0 35 35 0 43 43 0 39 39 0 35 35 0 43 43 0 33 33 0 39 39 0 33 33 0 44 44 0 34 34 0 44 44 0 45 45 0 34 34 0 44 44 0 23 23 0 45 45 0 23 23 0 22 22 0 45 45 0 39 39 0 46 46 0 32 32 0 46 46 0 30 30 0 32 32 0 46 46 0 33 33 0 30 30 0 45 45 0 22 22 0 34 34 0 23 23 0 44 44 0 41 41 0 39 39 0 33 33 0 46 46 0 11 11 0 13 13 0 47 47 0 13 13 0 48 48 0 47 47 0 13 13 0 49 49 0 48 48 0 49 49 0 50 50 0 48 48 0 49 49 0 20 20 0 50 50 0 20 20 0 23 23 0 50 50 0 13 13 0 14 14 0 49 49 0 14 14 0 18 18 0 49 49 0 48 48 0 50 50 0 23 23 0 49 49 0 18 18 0 20 20 0 51 51 0 52 52 0 23 23 0 52 52 0 53 53 0 23 23 0 52 52 0 47 47 0 53 53 0 47 47 0 48 48 0 53 53 0 51 51 0 54 54 0 52 52 0 54 54 0 55 55 0 52 52 0 53 53 0 48 48 0 23 23 0 47 47 0 52 52 0 55 55 0 23 23 0 42 42 0 51 51 0 42 42 0 54 54 0 51 51 0 42 42 0 35 35 0 54 54 0 35 35 0 37 37 0 54 54 0 47 47 0 55 55 0 11 11 0 55 55 0 56 56 0 11 11 0 55 55 0 37 37 0 56 56 0 37 37 0 17 17 0 56 56 0 56 56 0 17 17 0 11 11 0 37 37 0 55 55 0 54 54 0 17 17 0 57 57 0 9 9 0 57 57 0 8 8 0 9 9 0 57 57 0 38 38 0 8 8 0 17 17 0 37 37 0 57 57 0 37 37 0 38 38 0 57 57 0</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Slime-mesh-skin">
+      <skin source="#Slime-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="Slime-mesh-skin-joints">
+          <Name_array id="Slime-mesh-skin-joints-array" count="30">Bone1 Bone2 Bone3 Bone4 Bone5 Bone6 Bone7 Bone8 Bone9 Bone10 Bone11 Bone12 Bone13 Bone14 Bone15 Bone16 Bone17 Bone18 Bone19 Bone20 Bone21 Bone22 Bone23 Bone24 Bone25 Bone26 Bone27 Bone28 Bone29 Bone30</Name_array>
+          <technique_common>
+            <accessor source="#Slime-mesh-skin-joints-array" count="30" stride="1">
+              <param name="JOINT" type="Name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Slime-mesh-skin-bind_poses">
+          <float_array id="Slime-mesh-skin-bind_poses-array" count="480">1 0 0 0 0 0.000000 1 -12 0 -1 0.000000 18 0 0 0 1 0.707106 -0.707108 0.000000 12.7279 0.707108 0.707106 0.000000 -12.7279 -0.000000 0 1 -12 0 0 0 1 -0.707114 -0.7071 0.000000 12.7278 -0.7071 0.707114 0 -12.7281 -0.000000 -0.000000 -1 12 0 0 0 1 0.000000 -0.6 0.8 1.19999 -0.000000 0.8 0.6 -21.6 -1 -0.000000 0.000000 0.000003 0 0 0 1 0.000000 -0.832051 -0.5547 21.6333 0.000000 0.5547 -0.832051 0.000002 1 -0.000000 0.000000 -0.000003 0 0 0 1 1 0 0 0 0 0.000000 1 -12 0 -1 0.000000 -18 0 0 0 1 0.707106 0.707108 -0.000000 12.7279 0.707108 -0.707106 0.000000 -12.7279 0.000000 -0.000000 -1 12 0 0 0 1 -0.707114 0.7071 0.000000 12.7278 -0.7071 -0.707114 0.000000 -12.7281 0.000000 0 1 -12 0 0 0 1 0.000000 0.6 0.8 1.2 -0.000000 -0.8 0.6 -21.6 1 -0.000000 -0.000000 -0.000003 0 0 0 1 0.000000 0.83205 -0.5547 21.6333 0.000000 -0.5547 -0.83205 0.000009 -1 0 -0.000000 0.000003 0 0 0 1 1 0 0 -17.9999 0 0.000000 1 -12 0 -1 0.000000 0 0 0 0 1 -0.707106 0.707108 -0.000000 12.7279 0.707108 0.707106 0 -12.7279 0.000000 -0.000000 -1 12 0 0 0 1 -0.707107 -0.707107 0 12.7279 0.707107 -0.707107 0.000000 -12.7279 -0.000000 0.000000 1 -12 0 0 0 1 -0.599999 -0.000000 0.800001 1.19991 0.800001 0 0.599999 -21.5999 -0.000000 1 0.000000 -0.000001 0 0 0 1 -0.832049 -0.000000 -0.554702 21.6332 0.554702 -0.000000 -0.832049 0 0 -1 0.000000 0 0 0 0 1 1 0 0 18.0004 0 0.000000 1 -12 0 -1 0.000000 0 0 0 0 1 0.707114 0.7071 -0.000000 12.7283 -0.7071 0.707114 0 -12.7281 0.000000 0 1 -12 0 0 0 1 0.707114 -0.7071 0.000000 12.7283 -0.7071 -0.707114 0.000000 -12.7281 -0.000000 -0.000000 -1 12 0 0 0 1 0.600007 0.000000 0.799994 1.20041 -0.799994 0.000000 0.600007 -21.6003 0 -1 0.000000 0 0 0 0 1 0.832056 -0.000000 -0.554692 21.6336 -0.554692 -0.000000 -0.832056 0.000006 -0.000000 1 -0.000000 0 0 0 0 1 1 0 0 0 0 0.000000 1 -36 0 -1 0.000000 0 0 0 0 1 0.000000 0.6 -0.8 28.8 0.000000 0.8 0.6 -21.6 1 -0.000000 0.000000 -0.000004 0 0 0 1 0.000000 -0.6 -0.8 28.8 0.000000 -0.8 0.6 -21.6 -1 -0.000000 -0.000000 0.000004 0 0 0 1 0.599998 -0.000000 -0.800001 28.8 0.800001 0.000000 0.599998 -21.5999 0 -1 0.000000 0 0 0 0 1 -0.600007 0.000000 -0.799995 28.7998 -0.799995 0 0.600007 -21.6003 0.000000 1 0.000000 -0.000019 0 0 0 1 1 0 0 0 0 0.000000 1 -0.000001 0 -1 0.000000 0 0 0 0 1 0 0.832051 0.5547 -0.000001 -0.000000 0.5547 -0.832051 0.000001 -1 -0.000000 0.000000 0 0 0 0 1 0 -0.83205 0.5547 -0.000001 -0.000000 -0.5547 -0.83205 0.000001 1 0 -0.000000 0 0 0 0 1 0.83205 0.000000 0.554701 -0.000001 0.554701 0.000000 -0.83205 0.000001 -0.000000 1 0.000000 0 0 0 0 1 -0.832055 0.000000 0.554693 -0.000001 -0.554693 -0.000000 -0.832055 0.000001 0 -1 0.000000 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Slime-mesh-skin-bind_poses-array" count="30" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Slime-mesh-skin-weights">
+          <float_array id="Slime-mesh-skin-weights-array" count="49">1 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.7 0.3 0.3 0.7 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.3 0.7 0.5 0.5 0.7 0.3 0.3 0.7 0.5 0.5 0.7 0.3 0.7 0.3 0.3 0.7 0.5 0.5 0.5 0.5 0.5 0.5</float_array>
+          <technique_common>
+            <accessor source="#Slime-mesh-skin-weights-array" count="49" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Slime-mesh-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Slime-mesh-skin-bind_poses"/>
+        </joints>
+        <vertex_weights count="58">
+          <input semantic="JOINT" source="#Slime-mesh-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#Slime-mesh-skin-weights" offset="1"/>
+          <vcount>2 1 1 1 1 1 1 1 1 1 2 1 1 2 1 2 1 2 1 2 1 2 2 1 1 1 1 2 1 2 1 1 2 2 1 1 1 1 1 1 2 2 1 2 2 1 1 1 2 2 2 2 2 1 2 2 1 2 </vcount>
+          <v>3 1 1 2 21 0 23 0 20 0 20 0 20 0 20 0 20 0 22 0 24 0 3 3 2 4 15 0 16 0 16 5 19 6 2 0 16 7 18 8 18 0 18 9 17 10 4 0 1 11 4 12 26 0 26 13 28 14 26 15 28 16 25 0 1 0 0 0 3 0 12 17 14 18 11 0 11 19 13 20 10 0 10 0 12 21 13 22 12 23 14 24 10 0 9 0 5 0 7 0 8 0 6 0 8 25 6 26 28 27 27 28 27 0 9 29 6 30 28 31 27 32 28 0 12 0 19 0 26 33 29 34 2 35 4 36 26 37 29 38 27 39 29 40 27 41 29 42 29 0 9 43 7 44 19 45 17 46 17 0 7 47 8 48</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="unnamed_scene" name="unnamed_scene">
+      <node id="root-node" name="root" type="JOINT">
+        <translate>0 0 0</translate>
+        <rotate>-1 0 0 -90</rotate>
+        <node id="kosi_jnt-node" name="kosi_jnt" type="JOINT">
+          <translate>0 12 0</translate>
+          <node id="B_main_jnt-node" name="B_main_jnt" sid="Bone1" type="JOINT">
+            <translate>0 0 -18</translate>
+            <node id="B_L-node" name="B_L" sid="Bone2" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.862856 0.357408 0.357407 -98.4211</rotate>
+            </node>
+            <node id="B_R-node" name="B_R" sid="Bone3" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.281081 -0.678599 0.678599 -211.399</rotate>
+            </node>
+            <node id="B_T_jnt-node" name="B_T_jnt" sid="Bone4" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.408248 0.816496 -0.408248 -101.537</rotate>
+            </node>
+            <node id="B_U_jnt-node" name="B_U_jnt" sid="Bone5" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.691438 -0.20935 0.691438 -156.352</rotate>
+            </node>
+            <node id="eff_hip-node" name="eff_hip" type="JOINT">
+              <translate>0 0 -0.899319</translate>
+            </node>
+          </node>
+          <node id="F_main_jnt-node" name="F_main_jnt" sid="Bone6" type="JOINT">
+            <translate>0 0.000000 18</translate>
+            <node id="F_U_jnt-node" name="F_U_jnt" sid="Bone10" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.691438 -0.20935 -0.691438 -203.648</rotate>
+            </node>
+            <node id="F_L-node" name="F_L" sid="Bone7" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>-0.862856 -0.357407 0.357407 -98.4211</rotate>
+            </node>
+            <node id="F_T_jnt-node" name="F_T_jnt" sid="Bone9" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>-0.408248 -0.816496 -0.408248 -101.537</rotate>
+            </node>
+            <node id="F_R-node" name="F_R" sid="Bone8" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>-0.281081 0.678599 0.678599 -211.399</rotate>
+            </node>
+          </node>
+          <node id="L_main_jnt-node" name="L_main_jnt" sid="Bone11" type="JOINT">
+            <translate>17.9999 0 0</translate>
+            <node id="L_U_jnt-node" name="L_U_jnt" sid="Bone15" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0 0 1 -146.31</rotate>
+            </node>
+            <node id="L_T_jnt-node" name="L_T_jnt" sid="Bone14" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.447214 0.894427 0.000000 -180</rotate>
+            </node>
+            <node id="L_F_jnt-node" name="L_F_jnt" sid="Bone13" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.281085 0.678599 0.678598 -148.6</rotate>
+            </node>
+            <node id="L_B_jnt-node" name="L_B_jnt" sid="Bone12" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.281085 0.678598 -0.678598 -211.4</rotate>
+            </node>
+          </node>
+          <node id="L_asi_jnt-node" name="L_asi_jnt" type="JOINT">
+            <translate>8 -12 0</translate>
+          </node>
+          <node id="R_main_jnt-node" name="R_main_jnt" sid="Bone16" type="JOINT">
+            <translate>-18.0004 0 0</translate>
+            <node id="R_B_jnt-node" name="R_B_jnt" sid="Bone17" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.862859 -0.357403 -0.357403 -98.4208</rotate>
+            </node>
+            <node id="R_F_jnt-node" name="R_F_jnt" sid="Bone18" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>-0.862859 0.357403 -0.357403 -98.4208</rotate>
+            </node>
+            <node id="R_T_jnt-node" name="R_T_jnt" sid="Bone19" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0 0 -1 -53.1296</rotate>
+            </node>
+            <node id="R_U_jnt-node" name="R_U_jnt" sid="Bone20" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.957093 -0.28978 0 -180</rotate>
+            </node>
+          </node>
+          <node id="R_asi_jnt-node" name="R_asi_jnt" type="JOINT">
+            <translate>-8 -12 0</translate>
+          </node>
+          <node id="T_main_jnt-node" name="T_main_jnt" sid="Bone21" type="JOINT">
+            <translate>0 24 0</translate>
+            <node id="eff_head-node" name="eff_head" type="JOINT">
+              <translate>0 -1.2 0</translate>
+            </node>
+            <node id="T_R-node" name="T_R" sid="Bone25" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>-0.44721 0.894429 0.000000 -180</rotate>
+            </node>
+            <node id="T_F_jnt-node" name="T_F_jnt" sid="Bone23" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>-0.408248 0.816496 0.408248 -101.537</rotate>
+            </node>
+            <node id="T_B_jnt-node" name="T_B_jnt" sid="Bone22" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.408248 -0.816496 0.408248 -101.537</rotate>
+            </node>
+            <node id="T_L-node" name="T_L" sid="Bone24" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0 0 1 -53.1302</rotate>
+            </node>
+          </node>
+          <node id="U_main_jnt-node" name="U_main_jnt" sid="Bone26" type="JOINT">
+            <translate>0 -12 0</translate>
+            <node id="U_R-node" name="U_R" sid="Bone30" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0 0 1 -213.69</rotate>
+            </node>
+            <node id="U_F_jnt-node" name="U_F_jnt" sid="Bone28" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.691438 0.20935 0.691438 -203.648</rotate>
+            </node>
+            <node id="U_B_jnt-node" name="U_B_jnt" sid="Bone27" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.691438 0.20935 -0.691438 -156.352</rotate>
+            </node>
+            <node id="U_L-node" name="U_L" sid="Bone29" type="JOINT">
+              <translate>0 0 0</translate>
+              <rotate>0.957092 0.289785 0 -180</rotate>
+            </node>
+          </node>
+        </node>
+        <node id="trans-node" name="trans" type="JOINT">
+          <translate>0 0 0</translate>
+        </node>
+      </node>
+      <node id="Slime-node" name="Slime" type="NODE">
+        <instance_controller url="#Slime-mesh-skin">
+          <skeleton>#B_main_jnt-node</skeleton>
+          <skeleton>#F_main_jnt-node</skeleton>
+          <skeleton>#L_main_jnt-node</skeleton>
+          <skeleton>#R_main_jnt-node</skeleton>
+          <skeleton>#T_main_jnt-node</skeleton>
+          <skeleton>#U_main_jnt-node</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__470" target="#Material__470"/>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#unnamed_scene"/>
+  </scene>
+</COLLADA>

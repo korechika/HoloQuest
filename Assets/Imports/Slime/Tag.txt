@@ -1,0 +1,6 @@
+Game: Mario Sports Mix
+Subject: Slime
+Copyright: Square-Enix
+Model Ripper: Random Talking Bush
+Hosting Permissions: The Models Resource
+Comments: These models were scaled up to 4000% their original size. The originals were so small, that they were hard to work with.
