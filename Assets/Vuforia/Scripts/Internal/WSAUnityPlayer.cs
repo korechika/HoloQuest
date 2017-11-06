@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 #if HOLOLENS_API_AVAILABLE
-using UnityEngine.VR.WSA;
+using UnityEngine.XR.WSA;
 #endif
 
 
@@ -151,8 +151,8 @@ namespace Vuforia
 
 #if HOLOLENS_API_AVAILABLE
                 // This determines if we are starting on a holographic device
-                if (UnityEngine.VR.VRSettings.loadedDeviceName.Equals(UNITY_HOLOLENS_IDENTIFIER)
-                    && UnityEngine.VR.VRDevice.isPresent)
+                if (UnityEngine.XR.XRSettings.loadedDeviceName.Equals(UNITY_HOLOLENS_IDENTIFIER)
+                    && UnityEngine.XR.XRDevice.isPresent)
                 {
                     // set the focus point setter implementation
                     VuforiaUnity.SetHoloLensApiAbstraction(new HoloLensApiImplementation());
@@ -171,8 +171,8 @@ namespace Vuforia
         {
 #if HOLOLENS_API_AVAILABLE
                 // This determines if we are starting on a holographic device
-                if (UnityEngine.VR.VRSettings.loadedDeviceName.Equals(UNITY_HOLOLENS_IDENTIFIER)
-                    && UnityEngine.VR.VRDevice.isPresent)
+                if (UnityEngine.XR.XRSettings.loadedDeviceName.Equals(UNITY_HOLOLENS_IDENTIFIER)
+                    && UnityEngine.XR.XRDevice.isPresent)
                 {
                     if (!VuforiaUnity.SetHolographicAppCoordinateSystem(WorldManager.GetNativeISpatialCoordinateSystemPtr()))
                     {
