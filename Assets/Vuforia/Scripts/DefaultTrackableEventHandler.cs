@@ -17,7 +17,7 @@ namespace Vuforia
         #region PRIVATE_MEMBER_VARIABLES
  
         private TrackableBehaviour mTrackableBehaviour;
-		private SwordController mSwordController;
+		private RightHand mRightHand;
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -32,10 +32,10 @@ namespace Vuforia
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
-			mSwordController = FindObjectOfType<SwordController> ();
-			if (mSwordController == null) 
+			mRightHand = FindObjectOfType<RightHand> ();
+			if (mRightHand == null) 
 			{
-				Debug.Log ("SwordController not found");
+				Debug.Log ("RightHand not found.");
 			}
         }
 
@@ -74,8 +74,8 @@ namespace Vuforia
 
         private void OnTrackingFound()
         {
-			if (mSwordController != null) {
-				mSwordController.UpdateARKitPosition (this.transform.position);
+			if (mRightHand != null) {
+				mRightHand.UpdateARKitTransform (this.transform.position, this.transform.eulerAngles);
 			}
 
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);

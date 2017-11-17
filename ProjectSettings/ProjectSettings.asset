@@ -564,7 +564,7 @@ PlayerSettings:
       HumanInterfaceDevice: False
       InputInjectionBrokered: False
       InternetClient: False
-      InternetClientServer: False
+      InternetClientServer: True
       Location: False
       Microphone: True
       MusicLibrary: False
@@ -576,7 +576,7 @@ PlayerSettings:
       RemovableStorage: False
       SharedUserCertificates: False
       SpatialPerception: True
-      UserAccountInformation: False
+      UserAccountInformation: True
       VideosLibrary: False
       VoipCall: False
       WebCam: True
