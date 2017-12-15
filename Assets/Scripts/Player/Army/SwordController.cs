@@ -18,6 +18,11 @@ public class SwordController : MonoBehaviour {
 			m_swordObj.transform.eulerAngles = handRot;
 		}
 	}
+	public void UpdateSwordTransform (Quaternion quaternion) {
+		if (m_swordObj.activeSelf) {
+			m_swordObj.transform.rotation = quaternion;
+		}
+	}
 
 	public void Activate (bool flg) {
 		m_swordObj.SetActive (flg);

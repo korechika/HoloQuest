@@ -4,7 +4,7 @@ using UnityEngine;
 using uOSC;
 
 public class RightHand : MonoBehaviour {
-
+	
 	public enum AbilityType : int
 	{
 		SWORD = 0,
@@ -21,7 +21,7 @@ public class RightHand : MonoBehaviour {
 	private Vector3 m_arKitOriginalPos = Vector3.zero;		// ARKitが開始したときのコントローラの位置
 	private Vector3 m_currentARKitPos = Vector3.zero;		// ARKitから受信した生のデータ
 
-	// 角度はまだ微妙
+	// 角度はまだ微妙なので未使用
 	private Vector3 m_handOriginalRot = Vector3.zero;
 	private Vector3 m_arKitOriginalRot = Vector3.zero;
 	private Vector3 m_currentARKitRot = Vector3.zero;
@@ -36,35 +36,45 @@ public class RightHand : MonoBehaviour {
 		m_handOriginalRot = transform.rotation.eulerAngles;
 	}
 
-	// ARKitTransformReceiverからコントローラのTransformを受信し、アビリティを表示
+	/// <summary>
+	/// ARKit の Position と　Rotation をもとに右手の座標を決定し、アビリティの位置を更新
+	/// </summary>
 	private void _UpdateRightHandTransform (Vector3 arKitPos, Vector3 arKitRot) {
 		m_currentARKitPos = arKitPos;
 		m_currentARKitRot = arKitRot;
 		Vector3 handPos = m_handOriginalPos + (arKitPos - m_arKitOriginalPos);
 		Vector3 handRot = arKitRot;
 		//Vector3 handRot = m_handOriginalRot + (arKitRot - m_arKitOriginalRot);
+		_UpdateAbilityTransform (handPos, handRot);
+	}
 
+
+	private void _UpdateAbilityTransform (Vector3 handPos, Vector3 handRot) {
 		switch (m_currentAbilityType) {
 		case AbilityType.SWORD:
 			m_swordController.UpdateSwordTransform (handPos, handRot);
 			break;
 		case AbilityType.SPELL:
-			m_spellController.UpdateSpellTransform (handPos, handRot);
+			//m_spellController.UpdateSpellTransform (handPos, handRot);
+			m_spellController.UpdateSpellCircleTransform (handPos, handRot);
 			break;
 		}
 	}
 
+	// アビリティをスペルモードに切り替え
 	public void ChangeToSpellMode () {
 		// TODO: vuforia
 		Debug.Log("change to spell mode");
 		SwitchAbility (AbilityType.SPELL);
 	}
 
+	// スペル発射
 	public void SpellLaunch () {
 		m_spellController.Shoot ();
 		Debug.Log ("spell launch");
 	}
 
+	// スペルモードを解除
 	public void SpellCancel () {
 		SwitchAbility (AbilityType.SWORD);
 		Debug.Log ("spell cancel");
@@ -113,7 +123,8 @@ public class RightHand : MonoBehaviour {
 			m_swordController.Activate (true);
 			break;
 		case AbilityType.SPELL:
-			m_spellController.SetSpell (SpellController.SpellType.FIRE);	// 魔法をセット
+			//m_spellController.SetSpell (SpellController.SpellType.FIRE);	// 魔法をセット
+			m_spellController.SetSpellCircle ();	// 魔法陣をセット
 			break;
 		default:
 			break;

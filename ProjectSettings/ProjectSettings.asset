@@ -528,7 +528,7 @@ PlayerSettings:
     Metro: 2
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
-  scriptingRuntimeVersion: 0
+  scriptingRuntimeVersion: 1
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
@@ -541,7 +541,7 @@ PlayerSettings:
   metroCertificateNotAfter: 00ed8834154cd401
   metroApplicationDescription: Holo Quest
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Holo Quest
   metroCommandLineArgsFile: 
   metroTileShowName: 0
   metroMediumTileShowName: 0
@@ -557,13 +557,13 @@ PlayerSettings:
     WindowsStoreApps:
       AllJoyn: False
       BlockedChatMessages: False
-      Bluetooth: False
+      Bluetooth: True
       Chat: False
       CodeGeneration: False
       EnterpriseAuthentication: False
-      HumanInterfaceDevice: False
+      HumanInterfaceDevice: True
       InputInjectionBrokered: False
-      InternetClient: False
+      InternetClient: True
       InternetClientServer: True
       Location: False
       Microphone: True
@@ -639,7 +639,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: cd38ca8a-aaa7-408f-a301-bbd63845b00c
   projectName: Holo Quest
   organizationId: korechi

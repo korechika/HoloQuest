@@ -11,7 +11,7 @@ public class MonsterSpawner : MonoBehaviour {
 		#if UNITY_EDITOR
 		StartCoroutine (_SpawnMonsterAfterFieldSet(1f));
 		#else
-		StartCoroutine (_SpawnMonsterAfterFieldSet(15f));
+		StartCoroutine (_SpawnMonsterAfterFieldSet(5f));
 		#endif
 	}
 
@@ -59,6 +59,6 @@ public class MonsterSpawner : MonoBehaviour {
 	/// Raises the all monster disappear event.
 	/// </summary>
 	public void OnAllMonsterDisappear () {
-		StartCoroutine (_SpawnMonsterAfterFieldSet(5f));
+		StartCoroutine (_SpawnMonsterAfterFieldSet(1f));
 	}
 }

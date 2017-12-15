@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpellController : MonoBehaviour {
-
+	
+	// 呪文の種類
 	public enum SpellType : int
 	{
 		FIRE = 0,
@@ -11,33 +12,56 @@ public class SpellController : MonoBehaviour {
 	}
 
 	public GameObject[] m_SpellPrefab;
+	public GameObject m_SpellCirclePrefab;
 	private GameObject m_currentSpell;
+	private GameObject m_spellCircle;
 
 	private int m_currentSpedllID = 0;
 	private bool m_isShooting = false;
 
+	/// <summary>
+	/// 現在の呪文を発射（現在は攻撃呪文のみを扱うため敵モンスターに呪文が飛んでいく）
+	/// TODO: いずれ回復呪文などの実装も視野に
+	/// </summary>
 	public void Shoot () {
 		Debug.Log ("Shoot!");
 		if (m_currentSpell) {
-			m_isShooting = true;
-			if (GameObject.FindWithTag ("Monster")) {
-				StartCoroutine (_MoveSpell (m_currentSpell, m_currentSpell.transform.position, GameObject.FindWithTag ("Monster").transform.position));
-			} else {
-				StartCoroutine (_MoveSpell (m_currentSpell, m_currentSpell.transform.position, Camera.main.transform.position + Camera.main.transform.forward * 1.0f));
-			}
+			ShootSpell ();
+		} else {
+			SetSpell (SpellType.FIRE);
+			ShootSpell ();
 		}
 	}
 
+	private void ShootSpell() {
+		m_isShooting = true;
+		if (GameObject.FindWithTag ("Monster")) {
+			StartCoroutine (_MoveSpell (m_currentSpell, m_currentSpell.transform.position, GameObject.FindWithTag ("Monster").transform.position));
+		} else {
+			StartCoroutine (_MoveSpell (m_currentSpell, m_currentSpell.transform.position, Camera.main.transform.position + Camera.main.transform.forward * 1.0f));
+		}
+	}
 
+	/// <summary>
+	/// 呪文の発射が終了したとき
+	/// </summary>
 	public void ShootEnd() {
 		Debug.Log ("Shoot End");
 		m_isShooting = false;
+		Destroy (m_currentSpell);
 	}
 
 	public void UpdateSpellTransform (Vector3 handPos, Vector3 handRot) {
 		if (m_currentSpell.activeSelf && !m_isShooting) {
 			m_currentSpell.transform.position = handPos;
 			m_currentSpell.transform.eulerAngles = handRot;
+		}
+	}
+
+	public void UpdateSpellCircleTransform (Vector3 handPos, Vector3 handRot) {
+		if (m_spellCircle) {
+			m_spellCircle.transform.position = handPos;
+			m_spellCircle.transform.eulerAngles = handRot;
 		}
 	}
 
@@ -51,10 +75,17 @@ public class SpellController : MonoBehaviour {
 	}
 
 	/// <summary>
+	/// 魔法陣を展開
+	/// </summary>
+	public void SetSpellCircle () {
+		m_spellCircle = Instantiate (m_SpellCirclePrefab);
+	}
+
+	/// <summary>
 	/// 呪文を解除
 	/// </summary>
 	public void UnsetSpell() {
-		m_currentSpell.SetActive (false);
+		Destroy (m_spellCircle);
 	}
 
 	/// <summary>
@@ -66,6 +97,7 @@ public class SpellController : MonoBehaviour {
 		moveHash.Add ("time", time);
 		moveHash.Add ("oncompletetarget", this.gameObject);
 		moveHash.Add ("oncomplete", "ShootEnd");
+		moveHash.Add ("easeType", iTween.EaseType.easeInCubic);
 		iTween.MoveTo (spellObj, moveHash);
 		// 衝突判定も
 		yield return null;

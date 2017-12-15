@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class CubeMonsterBehavior : Monster {
 
 	public int m_HitPoint = 5;
+	public int m_AttackPoint = 1;
 
 	private GameObject HitPointTextObj;
 	private TextMesh m_hitPointText;
@@ -36,19 +37,33 @@ public class CubeMonsterBehavior : Monster {
 	/// Raises the collision enter event.
 	/// </summary>
 	void OnCollisionEnter(Collision collision) {
-		Debug.Log ("collision");
 		if (collision.gameObject.tag == "Army") {
-			if (this.hitPoint > 0) {
-				this.hitPoint--;
-				this.UpdateHitPointText (m_hitPointText);
-				this.transform.LookAt (Camera.main.transform);
-			}
-
-			if (hitPoint == 0) {
-				hitPoint--;
-				StartCoroutine (ExtinguishMonster ());
-				this.OnMonsterDisappeared.Invoke ();
-			}
+			_ReduceHP (1);
+		} else if (collision.gameObject.tag == "Spell") {
+			_ReduceHP (1);
+		} else if (collision.gameObject.tag == "UnderPlane") {
+			StartCoroutine (ExtinguishMonster ());
+			this.OnMonsterDisappeared.Invoke ();
 		}
+	}
+
+
+	// モンスターのHPを減らす
+	private void _ReduceHP (int damage) {
+		if (this.hitPoint > 0) {
+			this.hitPoint -= damage;
+			this.UpdateHitPointText (m_hitPointText);
+			this.transform.LookAt (Camera.main.transform);
+		}
+		if (hitPoint == 0) {
+			hitPoint -= damage;
+			StartCoroutine (ExtinguishMonster ());
+			this.OnMonsterDisappeared.Invoke ();
+		}
+	}
+
+	// プレイヤーへ攻撃
+	protected override void AttackToPlayer () {
+		
 	}
 }

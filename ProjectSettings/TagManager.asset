@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Army
   - Monster
+  - UnderPlane
+  - Spell
   layers:
   - Default
   - TransparentFX

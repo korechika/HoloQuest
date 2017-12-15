@@ -1161,7 +1161,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65437368498013524
 BoxCollider:
@@ -1169,7 +1169,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168149759323210}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cae427be518802e43995430a4a3883b6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1340,7 +1340,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1537803927
+  randomSeed: -1360338792
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -74,4 +74,6 @@ public abstract class Monster : MonoBehaviour{
 			this.gameObject.GetComponent<ParticleSystem> ().Play ();
 		}
 	}
+
+	protected abstract void AttackToPlayer ();
 }
