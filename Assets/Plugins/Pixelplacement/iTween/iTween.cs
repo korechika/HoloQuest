@@ -1,4 +1,4 @@
-// Copyright (c) 2011 Bob Berkebile (pixelplacment)
+// Copyright (c) 2011 - 2018 Bob Berkebile (pixelplacment)
 // Please direct any bugs/comments/suggestions to http://pixelplacement.com
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,20 +40,17 @@ using UnityEngine;
 #endregion
 
 /// <summary>
-/// <para>Version: 2.0.6</para>	 
+/// <para>Version: 2.0.7</para>	 
 /// <para>Author: Bob Berkebile (http://pixelplacement.com)</para>
 /// <para>Support: http://itween.pixelplacement.com</para>
 /// </summary>
-public class iTween : MonoBehaviour{
-		
+public class iTween : MonoBehaviour
+{
 	#region Variables
-	
+
 	//repository of all living iTweens:
 	public static List<Hashtable> tweens = new List<Hashtable>();
-	
-	//camera fade object:
-//	private static GameObject cameraFade;
-	
+
 	//status members (made public for visual troubleshooting in the inspector):
 	public string id, type, method;
 	public iTween.EaseType easeType;
@@ -198,8 +195,6 @@ public class iTween : MonoBehaviour{
 		//update defaults:
 		public static float updateTimePercentage = .05f;
 		public static float updateTime = 1f*updateTimePercentage;
-		//cameraFade defaults:
-		public static int cameraFadeDepth = 999999;
 		//path look ahead amount:
 		public static float lookAhead = .05f;
         public static bool useRealTime = false; // Added by PressPlay
@@ -220,167 +215,7 @@ public class iTween : MonoBehaviour{
 	public static void Init(GameObject target){
 		MoveBy(target,Vector3.zero,0);
 	}
-	
-	/// <summary>
-	/// Instantly changes the amount(transparency) of a camera fade and then returns it back over time with MINIMUM customization options.
-	/// </summary>
-	/// <param name="amount">
-	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for how transparent the Texture2D that the camera fade uses is.
-	/// </param>
-	/// <param name="time">
-	/// A <see cref="System.Single"/> for the time in seconds the animation will take to complete.
-	/// </param>
-	public static void CameraFadeFrom(float amount, float time){
-		Debug.LogWarning ("This feature is no longer supported");
-		return;
 
-//		if(cameraFade){
-//			CameraFadeFrom(Hash("amount",amount,"time",time));
-//		}else{
-//			Debug.LogError("iTween Error: You must first add a camera fade object with CameraFadeAdd() before atttempting to use camera fading.");
-//		}
-	}
-	
-	/// <summary>
-	/// Instantly changes the amount(transparency) of a camera fade and then returns it back over time with FULL customization options.
-	/// </summary>
-	/// <param name="amount">
-	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for how transparent the Texture2D that the camera fade uses is.
-	/// </param>
-	/// <param name="time">
-	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for the time in seconds the animation will take to complete.
-	/// </param>
-	/// <param name="delay">
-	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for the time in seconds the animation will wait before beginning.
-	/// </param>
-	/// <param name="easetype">
-	/// A <see cref="EaseType"/> or <see cref="System.String"/> for the shape of the easing curve applied to the animation.
-	/// </param>   
-	/// <param name="looptype">
-	/// A <see cref="LoopType"/> or <see cref="System.String"/> for the type of loop to apply once the animation has completed.
-	/// </param>
-	/// <param name="onstart">
-	/// A <see cref="System.String"/> for the name of a function to launch at the beginning of the animation.
-	/// </param>
-	/// <param name="onstarttarget">
-	/// A <see cref="GameObject"/> for a reference to the GameObject that holds the "onstart" method.
-	/// </param>
-	/// <param name="onstartparams">
-	/// A <see cref="System.Object"/> for arguments to be sent to the "onstart" method.
-	/// </param>
-	/// <param name="onupdate"> 
-	/// A <see cref="System.String"/> for the name of a function to launch on every step of the animation.
-	/// </param>
-	/// <param name="onupdatetarget">
-	/// A <see cref="GameObject"/> for a reference to the GameObject that holds the "onupdate" method.
-	/// </param>
-	/// <param name="onupdateparams">
-	/// A <see cref="System.Object"/> for arguments to be sent to the "onupdate" method.
-	/// </param> 
-	/// <param name="oncomplete">
-	/// A <see cref="System.String"/> for the name of a function to launch at the end of the animation.
-	/// </param>
-	/// <param name="oncompletetarget">
-	/// A <see cref="GameObject"/> for a reference to the GameObject that holds the "oncomplete" method.
-	/// </param>
-	/// <param name="oncompleteparams">
-	/// A <see cref="System.Object"/> for arguments to be sent to the "oncomplete" method.
-	/// </param>
-	public static void CameraFadeFrom(Hashtable args){		
-		Debug.LogWarning ("This feature is no longer supported");
-		return;
-
-		//establish iTween:
-//		if(cameraFade){
-//			ColorFrom(cameraFade,args);
-//		}else{
-//			Debug.LogError("iTween Error: You must first add a camera fade object with CameraFadeAdd() before atttempting to use camera fading.");
-//		}
-	}	
-	
-	/// <summary>
-	/// Changes the amount(transparency) of a camera fade over time with MINIMUM customization options.
-	/// </summary>
-	/// <param name="amount">
-	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for how transparent the Texture2D that the camera fade uses is.
-	/// </param>
-	/// <param name="time">
-	/// A <see cref="System.Single"/> for the time in seconds the animation will take to complete.
-	/// </param>
-	public static void CameraFadeTo(float amount, float time){
-		Debug.LogWarning ("This feature is no longer supported");
-		return;
-
-//		if(cameraFade){
-//			CameraFadeTo(Hash("amount",amount,"time",time));
-//		}else{
-//			Debug.LogError("iTween Error: You must first add a camera fade object with CameraFadeAdd() before atttempting to use camera fading.");
-//		}
-	}	
-	
-	/// <summary>
-	/// Changes the amount(transparency) of a camera fade over time with FULL customization options.
-	/// </summary>
-	/// <param name="amount">
-	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for how transparent the Texture2D that the camera fade uses is.
-	/// </param>
-	/// <param name="time">
-	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for the time in seconds the animation will take to complete.
-	/// </param>
-	/// <param name="delay">
-	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for the time in seconds the animation will wait before beginning.
-	/// </param>
-	/// <param name="easetype">
-	/// A <see cref="EaseType"/> or <see cref="System.String"/> for the shape of the easing curve applied to the animation.
-	/// </param>   
-	/// <param name="looptype">
-	/// A <see cref="LoopType"/> or <see cref="System.String"/> for the type of loop to apply once the animation has completed.
-	/// </param>
-	/// <param name="onstart">
-	/// A <see cref="System.String"/> for the name of a function to launch at the beginning of the animation.
-	/// </param>
-	/// <param name="onstarttarget">
-	/// A <see cref="GameObject"/> for a reference to the GameObject that holds the "onstart" method.
-	/// </param>
-	/// <param name="onstartparams">
-	/// A <see cref="System.Object"/> for arguments to be sent to the "onstart" method.
-	/// </param>
-	/// <param name="onupdate"> 
-	/// A <see cref="System.String"/> for the name of a function to launch on every step of the animation.
-	/// </param>
-	/// <param name="onupdatetarget">
-	/// A <see cref="GameObject"/> for a reference to the GameObject that holds the "onupdate" method.
-	/// </param>
-	/// <param name="onupdateparams">
-	/// A <see cref="System.Object"/> for arguments to be sent to the "onupdate" method.
-	/// </param> 
-	/// <param name="oncomplete">
-	/// A <see cref="System.String"/> for the name of a function to launch at the end of the animation.
-	/// </param>
-	/// <param name="oncompletetarget">
-	/// A <see cref="GameObject"/> for a reference to the GameObject that holds the "oncomplete" method.
-	/// </param>
-	/// <param name="oncompleteparams">
-	/// A <see cref="System.Object"/> for arguments to be sent to the "oncomplete" method.
-	/// </param>
-	public static void CameraFadeTo(Hashtable args){
-		Debug.LogWarning ("This feature is no longer supported");
-		return;
-
-		/*
-		CameraFadeAdd(Defaults.cameraFadeDepth);
-		
-		//rescale cameraFade just in case screen size has changed to ensure it takes up the full screen:
-		cameraFade.guiTexture.pixelInset=new Rect(0,0,Screen.width,Screen.height);
-		*/
-	
-//		if(cameraFade){
-//			//establish iTween:
-//			ColorTo(cameraFade,args);
-//		}else{
-//			Debug.LogError("iTween Error: You must first add a camera fade object with CameraFadeAdd() before atttempting to use camera fading.");
-//		}
-	}	
 	
 	/// <summary>
 	/// Returns a value to an 'oncallback' method interpolated between the supplied 'from' and 'to' values for application as desired.  Requires an 'onupdate' callback that accepts the same type as the supplied 'from' and 'to' properties.
@@ -469,7 +304,7 @@ public class iTween : MonoBehaviour{
 	}
 	
 	/// <summary>
-	/// Changes a GameObject's alpha value instantly then returns it to the provided alpha over time with MINIMUM customization options.  If a GUIText or GUITexture component is attached, it will become the target of the animation. Identical to using ColorFrom and using the "a" parameter. 
+	/// Changes a GameObject's alpha value instantly then returns it to the provided alpha over time with MINIMUM customization options.  Identical to using ColorFrom and using the "a" parameter. 
 	/// </summary>
 	/// <param name="target">
 	/// A <see cref="GameObject"/> to be the target of the animation.
@@ -485,7 +320,7 @@ public class iTween : MonoBehaviour{
 	}
 	
 	/// <summary>
-	/// Changes a GameObject's alpha value instantly then returns it to the provided alpha over time with FULL customization options.  If a GUIText or GUITexture component is attached, it will become the target of the animation. Identical to using ColorFrom and using the "a" parameter.
+	/// Changes a GameObject's alpha value instantly then returns it to the provided alpha over time with FULL customization options. Identical to using ColorFrom and using the "a" parameter.
 	/// </summary>
 	/// <param name="alpha">
 	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for the initial alpha value of the animation.
@@ -540,7 +375,7 @@ public class iTween : MonoBehaviour{
 	}		
 	
 	/// <summary>
-	/// Changes a GameObject's alpha value over time with MINIMUM customization options.  If a GUIText or GUITexture component is attached, it will become the target of the animation. Identical to using ColorTo and using the "a" parameter.
+	/// Changes a GameObject's alpha value over time with MINIMUM customization options. Identical to using ColorTo and using the "a" parameter.
 	/// </summary>
 	/// <param name="target">
 	/// A <see cref="GameObject"/> to be the target of the animation.
@@ -556,7 +391,7 @@ public class iTween : MonoBehaviour{
 	}	
 
 	/// <summary>
-	/// Changes a GameObject's alpha value over time with FULL customization options.  If a GUIText or GUITexture component is attached, it will become the target of the animation. Identical to using ColorTo and using the "a" parameter.
+	/// Changes a GameObject's alpha value over time with FULL customization options. Identical to using ColorTo and using the "a" parameter.
 	/// </summary>
 	/// <param name="alpha">
 	/// A <see cref="System.Single"/> or <see cref="System.Double"/> for the final alpha value of the animation.
@@ -611,7 +446,7 @@ public class iTween : MonoBehaviour{
 	}		
 	
 	/// <summary>
-	/// Changes a GameObject's color values instantly then returns them to the provided properties over time with MINIMUM customization options.  If a GUIText or GUITexture component is attached, it will become the target of the animation.
+	/// Changes a GameObject's color values instantly then returns them to the provided properties over time with MINIMUM customization options.
 	/// </summary>
 	/// <param name="target">
 	/// A <see cref="GameObject"/> to be the target of the animation.
@@ -627,7 +462,7 @@ public class iTween : MonoBehaviour{
 	}
 	
 	/// <summary>
-	/// Changes a GameObject's color values instantly then returns them to the provided properties over time with FULL customization options.  If a GUIText or GUITexture component is attached, it will become the target of the animation.
+	/// Changes a GameObject's color values instantly then returns them to the provided properties over time with FULL customization options.
 	/// </summary>
 	/// <param name="color">
 	/// A <see cref="Color"/> to change the GameObject's color to.
@@ -761,7 +596,7 @@ public class iTween : MonoBehaviour{
 	}		
 	
 	/// <summary>
-	/// Changes a GameObject's color values over time with MINIMUM customization options.  If a GUIText or GUITexture component is attached, they will become the target of the animation.
+	/// Changes a GameObject's color values over time with MINIMUM customization options.
 	/// </summary>
 	/// <param name="target">
 	/// A <see cref="GameObject"/> to be the target of the animation.
@@ -777,7 +612,7 @@ public class iTween : MonoBehaviour{
 	}
 	
 	/// <summary>
-	/// Changes a GameObject's color values over time with FULL customization options.  If a GUIText or GUITexture component is attached, they will become the target of the animation.
+	/// Changes a GameObject's color values over time with FULL customization options.
 	/// </summary>
 	/// <param name="color">
 	/// A <see cref="Color"/> to change the GameObject's color to.
@@ -5436,26 +5271,7 @@ public class iTween : MonoBehaviour{
 		
 		return pathLength;
 	}	
-	
-	/// <summary>
-	/// Creates and returns a full-screen Texture2D for use with CameraFade.
-	/// </summary>
-	/// <returns>
-	/// Texture2D
-	/// </returns>
-	/// <param name='color'>
-	/// Color
-	/// </param>
-	public static Texture2D CameraTexture(Color color){
-		Texture2D texture = new Texture2D(Screen.width,Screen.height,TextureFormat.ARGB32, false);
-		Color[] colors = new Color[Screen.width*Screen.height];
-		for (int i = 0; i < colors.Length; i++) {
-			colors[i]=color;
-		}
-		texture.SetPixels(colors);
-		texture.Apply();
-		return(texture);		
-	}
+
 	
 	/// <summary>
 	/// Puts a GameObject on a path at the provided percentage 
@@ -5960,126 +5776,6 @@ public class iTween : MonoBehaviour{
 			DrawPathHelper(suppliedPath, color,"handles");
 		}
 	}
-	
-	/// <summary>
-	/// Changes a camera fade's texture.
-	/// </summary>
-	/// <param name="depth">
-	/// A <see cref="System.Int32"/>
-	/// </param>
-	public static void CameraFadeDepth(int depth){
-		Debug.LogWarning ("This feature is no longer supported");
-		return;
-
-//		if(cameraFade){
-//			cameraFade.transform.position=new Vector3(cameraFade.transform.position.x,cameraFade.transform.position.y,depth);
-//		}
-	}
-	
-	/// <summary>
-	/// Removes and destroyes a camera fade.
-	/// </summary>
-	public static void CameraFadeDestroy(){
-		Debug.LogWarning ("This feature is no longer supported");
-		return;
-
-//		if(cameraFade){
-//			Destroy(cameraFade);
-//		}
-	}
-	
-	/// <summary>
-	/// Changes a camera fade's texture.
-	/// </summary>
-	/// <param name='texture'>
-	/// A <see cref="Texture2D"/>
-	/// </param>
-	public static void CameraFadeSwap(Texture2D texture){
-		Debug.LogWarning ("This feature is no longer supported");
-		return;
-//		if(cameraFade){
-//			cameraFade.GetComponent<GUITexture>().texture=texture;
-//		}
-	}
-	
-	/// <summary>
-	/// Creates a GameObject (if it doesn't exist) at the supplied depth that can be used to simulate a camera fade.
-	/// </summary>
-	/// <param name='texture'>
-	/// A <see cref="Texture2D"/>
-	/// </param>
-	/// <param name='depth'>
-	/// A <see cref="System.Int32"/>
-	/// </param>
-	/// <returns>
-	/// A <see cref="GameObject"/> for a reference to the CameraFade.
-	/// </returns>
-	public static GameObject CameraFadeAdd(Texture2D texture, int depth){
-		Debug.LogWarning ("This feature is no longer supported");
-		return null;
-
-//		if(cameraFade){
-//			return null;
-//		}else{			
-//			//establish colorFade object:
-//			cameraFade = new GameObject("iTween Camera Fade");
-//			cameraFade.transform.position= new Vector3(.5f,.5f,depth);
-//			cameraFade.AddComponent<GUITexture>();
-//			cameraFade.GetComponent<GUITexture>().texture=texture;
-//			cameraFade.GetComponent<GUITexture>().color = new Color(.5f,.5f,.5f,0);
-//			return cameraFade;
-//		}
-	}
-	
-	/// <summary>
-	/// Creates a GameObject (if it doesn't exist) at the default depth that can be used to simulate a camera fade.
-	/// </summary>
-	/// <param name='texture'>
-	/// A <see cref="Texture2D"/>
-	/// </param>
-	/// <returns>
-	/// A <see cref="GameObject"/> for a reference to the CameraFade.
-	/// </returns>
-	public static GameObject CameraFadeAdd(Texture2D texture){
-		Debug.LogWarning ("This feature is no longer supported");
-		return null;
-
-//		if(cameraFade){
-//			return null;
-//		}else{			
-//			//establish colorFade object:
-//			cameraFade = new GameObject("iTween Camera Fade");
-//			cameraFade.transform.position= new Vector3(.5f,.5f,Defaults.cameraFadeDepth);
-//			cameraFade.AddComponent<GUITexture>();
-//			cameraFade.GetComponent<GUITexture>().texture=texture;
-//			cameraFade.GetComponent<GUITexture>().color = new Color(.5f,.5f,.5f,0);
-//			return cameraFade;
-//		}
-	}
-	
-	/// <summary>
-	/// Creates a GameObject (if it doesn't exist) at the default depth filled with black that can be used to simulate a camera fade.
-	/// </summary>
-	/// <returns>
-	/// A <see cref="GameObject"/> for a reference to the CameraFade.
-	/// </returns>
-	public static GameObject CameraFadeAdd(){
-		Debug.LogWarning ("This feature is no longer supported");
-		return null;
-
-//		if(cameraFade){
-//			return null;
-//		}else{			
-//			//establish colorFade object:
-//			cameraFade = new GameObject("iTween Camera Fade");
-//			cameraFade.transform.position= new Vector3(.5f,.5f,Defaults.cameraFadeDepth);
-//			cameraFade.AddComponent<GUITexture>();
-//			cameraFade.GetComponent<GUITexture>().texture=CameraTexture(Color.black);
-//			cameraFade.GetComponent<GUITexture>().color = new Color(.5f,.5f,.5f,0);
-//			return cameraFade;
-//		}
-	}	
-	
 	
 	//#################################
 	//# RESUME UTILITIES AND OVERLOADS # 

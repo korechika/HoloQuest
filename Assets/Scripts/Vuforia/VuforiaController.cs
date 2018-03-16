@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Vuforia;
+//using Vuforia;
 
 public class VuforiaController : SingletonMonoBehaviour<VuforiaController> {
-
+	/*
 	void Start() {
 		EnableVuforia (false);
 	}
@@ -20,4 +20,5 @@ public class VuforiaController : SingletonMonoBehaviour<VuforiaController> {
 			Debug.Log ("No VuforiaManager instance found");
 		}
 	}
+	*/
 }

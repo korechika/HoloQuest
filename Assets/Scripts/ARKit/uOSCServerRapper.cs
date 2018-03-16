@@ -81,7 +81,7 @@ namespace uOSC
 				// not use yet
 				break;
 			case (int)OpeType.CALIBRATION:
-				VuforiaController.Instance.EnableVuforia (true);
+//				VuforiaController.Instance.EnableVuforia (true);
 				break;
 			case (int)OpeType.SPELL:
 				m_rightHand.ChangeToSpellMode ();

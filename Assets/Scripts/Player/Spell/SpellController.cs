@@ -71,6 +71,8 @@ public class SpellController : MonoBehaviour {
 	public void SetSpell (SpellType type) {
 		m_currentSpell = Instantiate (m_SpellPrefab [(int)type]);
 		m_currentSpell.SetActive (true);
+		m_currentSpell.transform.position = m_spellCircle.transform.position;
+		m_currentSpell.transform.rotation = m_spellCircle.transform.rotation;
 		m_currentSpedllID = (int)type;
 	}
 

@@ -88,7 +88,7 @@ public class RightHand : MonoBehaviour {
 		m_handOriginalRot = vuforiaRot;
 		m_arKitOriginalPos = m_currentARKitPos;
 		m_arKitOriginalRot = m_currentARKitRot;
-		VuforiaController.Instance.EnableVuforia (false);	// 処理高速化のため、キャリブレーションしたらVuforiaを無効にする
+		//VuforiaController.Instance.EnableVuforia (false);	// 処理高速化のため、キャリブレーションしたらVuforiaを無効にする
 	}
 
 	// アビリティを変更する
